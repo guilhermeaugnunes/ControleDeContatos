@@ -7,15 +7,15 @@ namespace ControleDeContatos.Models
         public int Id { get; set; }
         
         [Required(ErrorMessage = "Digite o nome do contato.")]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
         
         [Required(ErrorMessage = "Digite o E-mail do contato.")]
         [EmailAddress(ErrorMessage = "Digite um e-mail válido.")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required(ErrorMessage = "Digite o Celular do contato.")]
         [Phone(ErrorMessage = "Digite um celular válido.")]
-        public string Celular { get; set; }
+        public string? Celular { get; set; }
         
     }
 }
