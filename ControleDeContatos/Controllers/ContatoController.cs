@@ -78,15 +78,8 @@ namespace ControleDeContatos.Controllers
             }
         }
         [HttpPost]
-        public IActionResult Alterar(ContatoModel contato)
+        public IActionResult Editar(ContatoModel contato)
         {
-            /*if (ModelState.IsValid)
-            {
-                _contatoRepositorio.Atualizar(contato);
-                return RedirectToAction("Index");
-            }
-
-            return View("Editar", contato);*/
             try
             {
                 if (ModelState.IsValid)
@@ -96,7 +89,7 @@ namespace ControleDeContatos.Controllers
                     return RedirectToAction("Index");
                 }
 
-                return View(contato);
+                return View("Editar", contato);
             }
             catch (System.Exception erro)
             {

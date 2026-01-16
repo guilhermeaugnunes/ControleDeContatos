@@ -10,7 +10,7 @@
 
 </div>
 
-<form asp-controller="Contato" asp-action="Alterar" method="post">
+<form asp-controller="Contato" asp-action="Editar" method="post">
     <input type="hidden" asp-for="Id" />
     <div class="form-group">
     <label for="nome">Nome</label>
@@ -33,6 +33,6 @@
 
     </div>
 
-    <button type="submit" class="btn btn-primary w-100">Alterar</button>
+    <button type="submit" class="btn btn-primary w-100">Editar</button>
     <a class="btn btn-secondary w-100" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
 </form>

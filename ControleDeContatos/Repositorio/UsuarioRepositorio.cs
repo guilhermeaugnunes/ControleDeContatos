@@ -10,10 +10,16 @@ namespace ControleDeContatos.Repositorio
         {
             _bancoContext = bancoContext;
         }
+        public UsuarioModel BuscarPorLogin(string login)
+        {
+            return _bancoContext.Usuarios.FirstOrDefault(x => x.Login.ToLower() == login.ToLower());
+        }
+
         public UsuarioModel? ListarPorId(int id)
         {
             return _bancoContext.Usuarios.FirstOrDefault(x => x.Id == id);
         }
+
         public List<UsuarioModel> BuscarTodos()
         {
             return _bancoContext.Usuarios.ToList();
@@ -35,7 +41,7 @@ namespace ControleDeContatos.Repositorio
             usuarioDB.Nome = usuario.Nome;
             usuarioDB.Email = usuario.Email;
             usuarioDB.Login = usuario.Login;
-            usuarioDB.Senha = usuario.Senha;
+            //usuarioDB.Senha = usuario.Senha;
             usuarioDB.Perfil = usuario.Perfil;
             usuarioDB.DataAtualizacao = DateTime.Now;
 
